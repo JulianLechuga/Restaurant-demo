@@ -1,0 +1,195 @@
+.reservations-section {
+  background-color: var(--color-background);
+}
+
+.reservations-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+
+@media (min-width: 992px) {
+  .reservations-grid {
+    grid-template-columns: 5fr 7fr;
+    gap: 5rem;
+  }
+}
+
+.reservations-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-text {
+  font-size: 1.1rem;
+  color: var(--color-text-light);
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
+}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 2.5rem;
+  border-left: 4px solid var(--color-primary);
+}
+
+.contact-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background-color: #fcece3;
+  color: var(--color-primary);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.contact-card h3 {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-text-light);
+  margin-bottom: 0.25rem;
+}
+
+.contact-detail {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--color-secondary);
+  margin-bottom: 0.25rem;
+}
+
+.contact-subdetail {
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+}
+
+.booking-policies h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: var(--color-secondary);
+}
+
+.booking-policies ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.booking-policies li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: var(--color-text-light);
+  line-height: 1.5;
+}
+
+.booking-policies li::before {
+  content: '•';
+  color: var(--color-primary);
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  top: -2px;
+  font-size: 1.2rem;
+}
+
+.book-form-container {
+  background-color: white;
+  padding: 2.5rem;
+  border-radius: 8px;
+  box-shadow: var(--shadow-md);
+}
+
+.book-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-title {
+  font-size: 1.75rem;
+  color: var(--color-secondary);
+  margin-bottom: 0.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .form-group-row {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.form-group label {
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: var(--color-text);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  background-color: var(--color-background);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(193, 124, 91, 0.1);
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+}
+
+.success-message {
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: #f7faeb;
+  border: 1px solid #c5e1a5;
+  border-radius: 8px;
+  color: #33691e;
+}
+
+.success-message h3 {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #2e7d32;
+}

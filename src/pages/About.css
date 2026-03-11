@@ -1,0 +1,61 @@
+.about-story {
+  background-color: var(--color-background);
+}
+
+.about-chef {
+  background-color: #f7f3ec;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+@media (min-width: 992px) {
+  .about-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+  }
+
+  .about-grid.reverse .about-text-content {
+    order: 2;
+  }
+  
+  .about-grid.reverse .about-image-wrapper {
+    order: 1;
+  }
+}
+
+.about-text-content p {
+  font-size: 1.1rem;
+  color: var(--color-text-light);
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.about-image-wrapper {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  height: 400px;
+}
+
+@media (min-width: 768px) {
+  .about-image-wrapper {
+    height: 600px;
+  }
+}
+
+.about-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.about-image-wrapper:hover .about-image {
+  transform: scale(1.05);
+}

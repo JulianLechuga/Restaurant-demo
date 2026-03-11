@@ -1,0 +1,107 @@
+.contact-section {
+  background-color: var(--color-background);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+
+@media (min-width: 992px) {
+  .contact-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+}
+
+.contact-intro {
+  font-size: 1.1rem;
+  color: var(--color-text-light);
+  line-height: 1.8;
+  margin-bottom: 3rem;
+}
+
+.info-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.info-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+}
+
+.info-card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background-color: #f7ede8;
+  color: var(--color-primary);
+  border-radius: 50%;
+  flex-shrink: 0;
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.info-card:hover .info-card-icon {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.info-card-title {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  color: var(--color-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.info-card-text {
+  color: var(--color-text-light);
+  line-height: 1.6;
+}
+
+.info-card-hours {
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+}
+
+.info-card-hours li {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px dotted var(--color-border);
+  padding: 0.5rem 0;
+  color: var(--color-text-light);
+}
+
+.info-card-hours li:last-child {
+  border-bottom: none;
+}
+
+.closed {
+  color: var(--color-primary);
+  font-weight: 500;
+}
+
+.map-container {
+  height: 400px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  background-color: #eaeaea;
+}
+
+@media (min-width: 992px) {
+  .map-container {
+    height: 100%;
+    min-height: 600px;
+  }
+}
+
+.map-iframe {
+  display: block;
+}
